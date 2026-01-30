@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ever Fotografías</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PORTADA -->
+  <header class="hero" style="background-image:url('images/portada.jpg')">
+    <div class="overlay">
+      <h1>EVER FOTOGRAFÍAS</h1>
+      <p>Somos un equipo de fotografía de eventos especializado en XV años y bodas. Capturamos momentos reales y recuerdos que duran para siempre.</p>
+      <a class="btn" href="https://wa.me/543813920039" target="_blank">Consultar fecha por WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- ÚLTIMOS EVENTOS -->
+  <section class="section">
+    <h2>Últimos eventos</h2>
+
+    <div class="event">
+      <img src="images/xv-july-1.jpg" alt="XV de July">
+      <div class="event-text">
+        <h3>XV años de July</h3>
+        <p class="testimonial">“Desde el primer momento nos hicieron sentir súper cómodos. Las fotos quedaron increíbles y captaron cada emoción del evento.”</p>
+        <span>— July</span>
+      </div>
+    </div>
+
+    <div class="event">
+      <img src="images/boda-juli-santi-1.jpg" alt="Boda Juli y Santi">
+      <div class="event-text">
+        <h3>Boda de Juli & Santi</h3>
+        <p class="testimonial">“Un trabajo impecable, atentos a cada detalle. Las fotos reflejan exactamente lo que vivimos ese día.”</p>
+        <span>— Juli & Santi</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMBOS -->
+  <section class="section combos">
+    <h2>Reservá tu fecha ahora y evitá que te la quiten</h2>
+    <p class="sub">Fechas limitadas · Se reserva únicamente con seña</p>
+
+    <div class="combo">
+      <h3>Paquete Básico</h3>
+      <strong>$350.000</strong>
+      <ul>
+        <li>Fotos digitales ilimitadas</li>
+      </ul>
+      <a class="btn" href="https://wa.me/543813920039?text=Hola%20quiero%20el%20Paquete%20Básico%20para%20XV" target="_blank">Elegir este combo</a>
+    </div>
+
+    <div class="combo destacado">
+      <h3>Álbum Chico</h3>
+      <strong>$600.000</strong>
+      <ul>
+        <li>Todas las fotos digitales</li>
+        <li>Álbum 100 fotos</li>
+        <li>1 sesión fotográfica</li>
+      </ul>
+      <a class="btn" href="https://wa.me/543813920039?text=Hola%20quiero%20el%20Combo%20Álbum%20Chico%20para%20XV" target="_blank">Elegir este combo</a>
+    </div>
+
+    <div class="combo">
+      <h3>Álbum Mediano</h3>
+      <strong>$750.000</strong>
+      <ul>
+        <li>Todas las fotos digitales</li>
+        <li>Álbum mediano 100 fotos</li>
+        <li>Sesión + portarretrato</li>
+      </ul>
+      <a class="btn" href="https://wa.me/543813920039?text=Hola%20quiero%20el%20Combo%20Álbum%20Mediano%20para%20XV" target="_blank">Elegir este combo</a>
+    </div>
+  </section>
+
+  <!-- REDES -->
+  <footer>
+    <p>Seguinos en redes</p>
+    <a href="https://www.instagram.com/ever.fotografias/" target="_blank">Instagram</a> |
+    <a href="https://www.tiktok.com/@everfotografias" target="_blank">TikTok</a>
+  </footer>
+
+</body>
+</html>
