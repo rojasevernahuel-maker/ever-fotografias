@@ -156,34 +156,39 @@ footer {
   opacity: 0.6;
 }
 
-/* COMBOS */
+/* COMBOS MODERNOS */
 .combos {
-  padding: 30px 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  padding: 40px 15px;
 }
 
 .combos-titulo {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
 }
 
-.combo {
+.combos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.combo-card {
   background: #141414;
-  border-radius: 18px;
-  padding: 18px;
+  border-radius: 22px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-.combo h3 {
-  font-size: 1.1rem;
+.combo-card h3 {
+  font-size: 1.15rem;
 }
 
 .precio {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #00ff88;
 }
@@ -191,49 +196,64 @@ footer {
 .precio span {
   font-size: 0.85rem;
   text-decoration: line-through;
-  opacity: 0.6;
+  opacity: 0.5;
   margin-left: 8px;
 }
 
-.combo ul {
+.combo-card ul {
   list-style: none;
+  font-size: 0.9rem;
   display: flex;
   flex-direction: column;
   gap: 6px;
-  font-size: 0.9rem;
 }
 
-.btn-combo {
+.combo-btn {
   margin-top: 10px;
-  text-align: center;
-  background: #00ff88;
+  background: linear-gradient(135deg, #00ff88, #00cc6a);
   color: #000;
-  padding: 12px;
-  border-radius: 25px;
+  text-align: center;
+  padding: 14px;
+  border-radius: 30px;
+  font-weight: 700;
   text-decoration: none;
-  font-weight: 600;
+}
+
+/* DESTACADOS */
+.destacado {
+  border: 2px solid #00ff88;
+}
+
+.premium {
+  background: linear-gradient(160deg, #1a1a1a, #0f0f0f);
+  border: 2px solid #ffd700;
 }
 
 /* EXTRAS */
 .extras {
-  padding: 30px 15px;
+  padding: 35px 15px;
   background: #0f0f0f;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
 }
 
 .extras h2 {
   text-align: center;
-  font-size: 1.3rem;
+  margin-bottom: 20px;
 }
 
-.extra {
+.extra-card {
   background: #1c1c1c;
-  border-radius: 14px;
-  padding: 15px;
+  border-radius: 18px;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
-  font-size: 0.95rem;
+  margin-bottom: 12px;
 }
+
+/* DESKTOP GRID */
+@media (min-width: 900px) {
+  .combos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 
