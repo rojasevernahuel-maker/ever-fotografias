@@ -118,43 +118,41 @@ body {
   font-size: 0.85rem;
 }
 
-/* ================= COMBOS (MOBILE FIRST) ================= */
+/* ===== COMBOS MOBILE FIRST (VERTICAL + ACORDEÓN) ===== */
+
 .combos {
-  padding: 35px 0;
+  padding: 35px 15px;
 }
 
 .combos-titulo {
   text-align: center;
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-/* Carrusel mobile */
-.combos-scroll {
+.combos-vertical {
   display: flex;
-  gap: 18px;
-  padding: 0 15px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  flex-direction: column;
+  gap: 22px;
 }
 
-/* Tarjeta combo */
+/* CARD */
 .combo-card {
-  min-width: 85%;
   background: #141414;
-  border-radius: 24px;
+  border-radius: 22px;
   padding: 22px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  scroll-snap-align: center;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+  gap: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
+/* TITULO */
 .combo-card h3 {
   font-size: 1.2rem;
 }
 
+/* PRECIO */
 .precio {
   font-size: 1.5rem;
   font-weight: 700;
@@ -163,12 +161,13 @@ body {
 
 .precio span {
   font-size: 0.85rem;
-  opacity: 0.5;
   text-decoration: line-through;
+  opacity: 0.5;
   margin-left: 8px;
 }
 
-.combo-card ul {
+/* LISTA */
+.combo-list {
   list-style: none;
   font-size: 0.95rem;
   display: flex;
@@ -176,8 +175,31 @@ body {
   gap: 6px;
 }
 
+/* BOTÓN VER MÁS */
+.ver-mas {
+  background: none;
+  border: none;
+  color: #00ff88;
+  font-weight: 600;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* CONTENIDO OCULTO */
+.combo-extra {
+  display: none;
+  margin-top: 8px;
+}
+
+/* ACTIVO */
+.combo-card.active .combo-extra {
+  display: flex;
+}
+
+/* BOTÓN PRINCIPAL */
 .combo-btn {
-  margin-top: 12px;
+  margin-top: 10px;
   background: linear-gradient(135deg, #00ff88, #00cc6a);
   color: #000;
   text-align: center;
@@ -185,82 +207,4 @@ body {
   border-radius: 30px;
   font-weight: 700;
   text-decoration: none;
-}
-
-/* Destacados */
-.destacado {
-  border: 2px solid #00ff88;
-}
-
-.premium {
-  border: 2px solid #ffd700;
-}
-
-/* ================= EXTRAS ================= */
-.extras {
-  padding: 30px 15px;
-  background: #0f0f0f;
-}
-
-.extras h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.extra-card {
-  background: #1c1c1c;
-  border-radius: 18px;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  text-align: center;
-  padding: 30px 15px;
-  font-size: 0.85rem;
-  opacity: 0.6;
-}
-
-/* ================= DESKTOP ================= */
-@media (min-width: 900px) {
-
-  .evento {
-    max-width: 1100px;
-    margin: 40px auto;
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-  .evento-titulo {
-    display: none;
-  }
-
-  .galeria-wrapper,
-  .testimonio {
-    flex: 1;
-  }
-
-  .galeria-scroll {
-    flex-wrap: wrap;
-    overflow: hidden;
-  }
-
-  .galeria-scroll img {
-    width: calc(33.33% - 10px);
-    height: 200px;
-  }
-
-  /* Combos en grilla */
-  .combos-scroll {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    overflow: visible;
-  }
-
-  .combo-card {
-    min-width: auto;
-  }
 }
