@@ -20,7 +20,7 @@ body {
 .hero-overlay {
   height: 100%;
   background: rgba(0,0,0,0.6);
-  display: flex;
+  display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
