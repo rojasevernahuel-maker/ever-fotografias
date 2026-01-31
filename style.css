@@ -1,115 +1,157 @@
-/* RESET */
+/* RESET TOTAL */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 body {
-  background: #000;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0b0b0b;
   color: #fff;
+  overflow-x: hidden;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero {
-  min-height: 100vh;
-  background: linear-gradient(to right, #000 35%, #111);
-  display: flex;
-  align-items: center;
-  padding: 30px;
+  height: 70vh;
+  background: url("imagenes/portada.jpg") center / cover no-repeat;
 }
 
-.hero-content {
-  max-width: 420px;
+.hero-overlay {
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
 .hero h1 {
-  font-size: 34px;
-  line-height: 1.1;
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 14px;
-  color: #ccc;
+  font-size: 0.95rem;
   margin-bottom: 20px;
 }
 
 .btn {
   background: #00ff88;
   color: #000;
-  padding: 10px 22px;
-  border-radius: 22px;
+  padding: 12px 26px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
 }
 
-/* ================= BLOQUE EVENTO ================= */
-.bloque-evento {
-  background: #1c1c1c;
-  margin: 40px 15px;
-  padding: 25px 15px 30px;
-  border-radius: 22px;
+/* EVENTO */
+.evento {
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.titulo-seccion {
+.evento-titulo {
   text-align: center;
-  font-size: 26px;
-  margin-bottom: 20px;
+  font-size: 1.3rem;
 }
 
-/* ================= GALERIA ================= */
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-bottom: 25px;
+/* GALERÍA COMPACTA */
+.galeria-wrapper {
+  background: #141414;
+  border-radius: 16px;
+  padding: 10px;
 }
 
-.galeria img {
-  width: 100%;
-  height: 180px;
+.galeria-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.galeria-scroll img {
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 14px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
 }
 
-/* ================= TESTIMONIO ================= */
+/* TESTIMONIO */
 .testimonio {
+  background: #1c1c1c;
+  border-radius: 16px;
+  padding: 15px;
   text-align: center;
-  padding-top: 10px;
 }
 
-.avatar {
-  width: 72px;
-  height: 72px;
-  margin: 0 auto 15px;
+.perfil {
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
-  border: 3px solid #00ff88;
-  overflow: hidden;
-}
-
-.avatar img {
-  width: 100%;
-  height: 100%;
+  margin: 0 auto 10px;
   object-fit: cover;
+  border: 2px solid #00ff88;
 }
 
-.frase {
+.testimonio p {
+  font-size: 0.9rem;
   font-style: italic;
-  font-size: 16px;
   margin-bottom: 6px;
-  color: #e0e0e0;
 }
 
-.autor {
+.testimonio span {
   color: #00ff88;
   font-weight: 600;
+  font-size: 0.85rem;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .galeria img {
-    height: 170px;
+/* DESKTOP */
+@media (min-width: 900px) {
+
+  .evento {
+    max-width: 1100px;
+    margin: 40px auto;
+    flex-direction: row;
+    align-items: stretch;
   }
+
+  .evento-titulo {
+    display: none;
+  }
+
+  .galeria-wrapper,
+  .testimonio {
+    flex: 1;
+  }
+
+  .galeria-scroll {
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .galeria-scroll img {
+    width: calc(33.33% - 10px);
+    height: 200px;
+  }
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  font-size: 0.85rem;
+  opacity: 0.6;
 }
