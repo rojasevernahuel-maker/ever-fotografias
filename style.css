@@ -1,4 +1,4 @@
-/* RESET TOTAL */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +17,7 @@ body {
   overflow-x: hidden;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
   height: 70vh;
   background: url("imagenes/portada.jpg") center / cover no-repeat;
@@ -53,7 +53,7 @@ body {
   font-weight: 600;
 }
 
-/* EVENTO */
+/* ================= EVENTOS ================= */
 .evento {
   padding: 25px 15px;
   display: flex;
@@ -66,7 +66,7 @@ body {
   font-size: 1.3rem;
 }
 
-/* GALERÍA COMPACTA */
+/* GALERÍA */
 .galeria-wrapper {
   background: #141414;
   border-radius: 16px;
@@ -118,136 +118,7 @@ body {
   font-size: 0.85rem;
 }
 
-/* DESKTOP */
-@media (min-width: 900px) {
-
-  .evento {
-    max-width: 1100px;
-    margin: 40px auto;
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-  .evento-titulo {
-    display: none;
-  }
-
-  .galeria-wrapper,
-  .testimonio {
-    flex: 1;
-  }
-
-  .galeria-scroll {
-    flex-wrap: wrap;
-    overflow: hidden;
-  }
-
-  .galeria-scroll img {
-    width: calc(33.33% - 10px);
-    height: 200px;
-  }
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px 15px;
-  font-size: 0.85rem;
-  opacity: 0.6;
-}
-
-
-.combos-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-.combo-card {
-  background: #141414;
-  border-radius: 22px;
-  padding: 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-.combo-card h3 {
-  font-size: 1.15rem;
-}
-
-.precio {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #00ff88;
-}
-
-.precio span {
-  font-size: 0.85rem;
-  text-decoration: line-through;
-  opacity: 0.5;
-  margin-left: 8px;
-}
-
-.combo-card ul {
-  list-style: none;
-  font-size: 0.9rem;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.combo-btn {
-  margin-top: 10px;
-  background: linear-gradient(135deg, #00ff88, #00cc6a);
-  color: #000;
-  text-align: center;
-  padding: 14px;
-  border-radius: 30px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-/* DESTACADOS */
-.destacado {
-  border: 2px solid #00ff88;
-}
-
-.premium {
-  background: linear-gradient(160deg, #1a1a1a, #0f0f0f);
-  border: 2px solid #ffd700;
-}
-
-/* EXTRAS */
-.extras {
-  padding: 35px 15px;
-  background: #0f0f0f;
-}
-
-.extras h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.extra-card {
-  background: #1c1c1c;
-  border-radius: 18px;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-
-/* DESKTOP GRID */
-@media (min-width: 900px) {
-  .combos-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ===== COMBOS MOBILE FIRST ===== */
-
+/* ================= COMBOS (MOBILE FIRST) ================= */
 .combos {
   padding: 35px 0;
 }
@@ -258,7 +129,7 @@ footer {
   margin-bottom: 20px;
 }
 
-/* SCROLL HORIZONTAL MOBILE */
+/* Carrusel mobile */
 .combos-scroll {
   display: flex;
   gap: 18px;
@@ -267,6 +138,7 @@ footer {
   scroll-snap-type: x mandatory;
 }
 
+/* Tarjeta combo */
 .combo-card {
   min-width: 85%;
   background: #141414;
@@ -315,7 +187,7 @@ footer {
   text-decoration: none;
 }
 
-/* DESTACADOS */
+/* Destacados */
 .destacado {
   border: 2px solid #00ff88;
 }
@@ -324,10 +196,15 @@ footer {
   border: 2px solid #ffd700;
 }
 
-/* EXTRAS */
+/* ================= EXTRAS ================= */
 .extras {
   padding: 30px 15px;
   background: #0f0f0f;
+}
+
+.extras h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .extra-card {
@@ -339,8 +216,44 @@ footer {
   margin-bottom: 12px;
 }
 
-/* DESKTOP */
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* ================= DESKTOP ================= */
 @media (min-width: 900px) {
+
+  .evento {
+    max-width: 1100px;
+    margin: 40px auto;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .evento-titulo {
+    display: none;
+  }
+
+  .galeria-wrapper,
+  .testimonio {
+    flex: 1;
+  }
+
+  .galeria-scroll {
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .galeria-scroll img {
+    width: calc(33.33% - 10px);
+    height: 200px;
+  }
+
+  /* Combos en grilla */
   .combos-scroll {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -351,4 +264,3 @@ footer {
     min-width: auto;
   }
 }
-
