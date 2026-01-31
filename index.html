@@ -4,191 +4,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ever Fotografías</title>
-
-  <style>
-    /* RESET */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body {
-      background: #0d0d0d;
-      color: #fff;
-    }
-
-    /* PORTADA */
-    .hero {
-      height: 100vh;
-      background: url("img/portada.jpg") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-    }
-
-    .hero h1 {
-      position: relative;
-      font-size: 2.5rem;
-      text-align: center;
-      z-index: 1;
-    }
-
-    /* SECCIONES */
-    section {
-      padding: 50px 20px;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      font-size: 1.8rem;
-    }
-
-    /* GALERÍA */
-    .galeria-card {
-      max-width: 420px;
-      margin: auto;
-      border-radius: 18px;
-      overflow: hidden;
-      background: #111;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-    }
-
-    .galeria-slider {
-      display: grid;
-      grid-template-columns: repeat(5, 100%);
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-    }
-
-    .galeria-slider::-webkit-scrollbar {
-      display: none;
-    }
-
-    .galeria-slider img {
-      width: 100%;
-      height: 320px;
-      object-fit: cover;
-      scroll-snap-align: center;
-    }
-
-    /* DESKTOP GALERÍA */
-    @media (min-width: 768px) {
-      .galeria-card {
-        max-width: 1100px;
-      }
-
-      .galeria-slider {
-        grid-template-columns: repeat(5, 1fr);
-        overflow: hidden;
-      }
-
-      .galeria-slider img {
-        height: 260px;
-      }
-    }
-
-    /* COMBOS */
-    .combos {
-      display: grid;
-      gap: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .combo {
-      background: #111;
-      border-radius: 16px;
-      padding: 25px;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    }
-
-    .combo h3 {
-      margin-bottom: 10px;
-      font-size: 1.3rem;
-    }
-
-    .combo p {
-      font-size: 0.95rem;
-      opacity: 0.85;
-    }
-
-    @media (min-width: 768px) {
-      .combos {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 0.9rem;
-      opacity: 0.6;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- PORTADA -->
-  <header class="hero">
-    <h1>Ever Fotografías</h1>
-  </header>
+<!-- ================= HERO ================= -->
+<header class="hero" style="background-image: url('imagenes/portada.jpg');">
+  <div class="hero-overlay">
+    <h1>EVER FOTOGRAFÍAS</h1>
+    <p>Fotografía profesional de XV años y bodas</p>
+    <a href="https://wa.me/543813920039" class="btn">Consultar fecha</a>
+  </div>
+</header>
 
-  <!-- GALERÍA -->
-  <section>
-    <h2>XV Años de Juli</h2>
+<!-- ================= EVENTO XV ================= -->
+<section class="evento">
 
-    <div class="galeria-card">
-      <div class="galeria-slider">
-        <img src="imagenes/xv-july-1.jpg" alt="">
-        <img src="img/juli2.jpg" alt="">
-        <img src="img/juli3.jpg" alt="">
-        <img src="img/juli4.jpg" alt="">
-        <img src="img/juli5.jpg" alt="">
-      </div>
+  <div class="galeria-card">
+    <h2>XV años de Juli</h2>
+
+    <div class="galeria-slider">
+      <img src="imagenes/xv-july-1.jpg">
+      <img src="imagenes/xv-july-2.jpg">
+      <img src="imagenes/xv-july-3.jpg">
+      <img src="imagenes/xv-july-4.jpg">
+      <img src="imagenes/xv-july-5.jpg">
     </div>
-  </section>
+  </div>
 
-  <!-- COMBOS -->
-  <section>
-    <h2>Combos</h2>
+  <div class="testimonio-card">
+    <img src="imagenes/xv-july-1.jpg" class="perfil">
+    <p>
+      “Nos hicieron sentir súper cómodos desde el primer momento.
+      Las fotos quedaron increíbles.”
+    </p>
+    <span>— Juli</span>
+  </div>
 
-    <div class="combos">
-      <div class="combo">
-        <h3>Básico</h3>
-        <p>Cobertura del evento<br>Fotos digitales</p>
-      </div>
+</section>
 
-      <div class="combo">
-        <h3>Intermedio</h3>
-        <p>Cobertura completa<br>Edición premium</p>
-      </div>
+<!-- ================= EVENTO BODA ================= -->
+<section class="evento">
 
-      <div class="combo">
-        <h3>Completo</h3>
-        <p>Foto + video<br>Entrega personalizada</p>
-      </div>
+  <div class="galeria-card">
+    <h2>Boda de Juli & Santi</h2>
+
+    <div class="galeria-slider">
+      <img src="imagenes/boda-juli-santi-1.jpg">
+      <img src="imagenes/boda-juli-santi-2.jpg">
+      <img src="imagenes/boda-juli-santi-3.jpg">
+      <img src="imagenes/boda-juli-santi-4.jpg">
+      <img src="imagenes/boda-juli-santi-5.jpg">
     </div>
-  </section>
+  </div>
 
-  <!-- FOOTER -->
-  <footer>
-    © Ever Fotografías
-  </footer>
+  <div class="testimonio-card">
+    <img src="imagenes/boda-juli-santi-1.jpg" class="perfil">
+    <p>
+      “Un trabajo impecable, atentos a cada detalle.
+      Captaron cada emoción.”
+    </p>
+    <span>— Juli & Santi</span>
+  </div>
+
+</section>
+
+<!-- ================= COMBOS ================= -->
+<section class="combos">
+
+  <h2>Reservá tu fecha</h2>
+
+  <div class="combos-grid">
+
+    <div class="combo">
+      <h3>Paquete Básico</h3>
+      <p>Fotos digitales ilimitadas</p>
+    </div>
+
+    <div class="combo">
+      <h3>Álbum Chico</h3>
+      <p>Fotos + álbum 100 fotos</p>
+    </div>
+
+    <div class="combo">
+      <h3>Álbum Mediano</h3>
+      <p>Fotos + álbum + sesión</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>Seguinos en redes</p>
+  <a href="https://www.instagram.com/ever.fotografias/" target="_blank">Instagram</a> ·
+  <a href="https://www.tiktok.com/@everfotografias" target="_blank">TikTok</a>
+</footer>
 
 </body>
 </html>
