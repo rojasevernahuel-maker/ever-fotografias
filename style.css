@@ -144,7 +144,7 @@ body {
   flex-direction: column;
   gap: 12px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.45);
-  border: 5px solid #2A2A2A; /* BORDE UNIFICADO */
+  border: 5px solid #2A2A2A;
 }
 
 .combo-card h3 {
@@ -208,10 +208,33 @@ body {
   text-decoration: none;
 }
 
-/* ================= DESTACADOS (NEUTRALIZADOS) ================= */
+/* ================= DESTACADOS NEUTRALIZADOS ================= */
 .destacado,
 .premium {
   border: 1px solid #2A2A2A;
+}
+
+/* ================= BLOQUE SERVICIOS ADICIONALES ================= */
+.servicios-bloque {
+  margin-top: 60px;
+  padding-top: 35px;
+  position: relative;
+}
+
+.servicios-bloque::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #2A2A2A, transparent);
+}
+
+.servicios-titulo {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 30px;
 }
 
 /* ================= SERVICIOS EXTRA ================= */
