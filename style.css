@@ -150,11 +150,6 @@ body {
   font-size: 1.2rem;
 }
 
-.combo-sub {
-  font-size: 0.85rem;
-  opacity: 0.7;
-}
-
 /* ================= PRECIO ================= */
 .precio {
   font-size: 1.5rem;
@@ -221,6 +216,13 @@ body {
   border: 2px solid #ffd700;
 }
 
+/* ================= SERVICIOS EXTRA ================= */
+.servicios-extra {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
 /* ================= FOOTER ================= */
 footer {
   text-align: center;
@@ -261,6 +263,12 @@ footer {
   .combos-vertical {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  .servicios-extra {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
 }
