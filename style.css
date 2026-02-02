@@ -144,7 +144,7 @@ body {
   flex-direction: column;
   gap: 12px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.45);
-  border: 5px solid #2A2A2A;
+  border: 1px solid #2A2A2A;
 }
 
 .combo-card h3 {
