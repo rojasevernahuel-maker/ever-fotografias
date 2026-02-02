@@ -144,6 +144,7 @@ body {
   flex-direction: column;
   gap: 12px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+  border: 1px solid #2A2A2A; /* BORDE UNIFICADO */
 }
 
 .combo-card h3 {
@@ -207,13 +208,10 @@ body {
   text-decoration: none;
 }
 
-/* ================= DESTACADOS ================= */
-.destacado {
-  border: 2px solid #00ff88;
-}
-
+/* ================= DESTACADOS (NEUTRALIZADOS) ================= */
+.destacado,
 .premium {
-  border: 2px solid #ffd700;
+  border: 1px solid #2A2A2A;
 }
 
 /* ================= SERVICIOS EXTRA ================= */
