@@ -151,6 +151,23 @@ body {
   font-size: 1.2rem;
 }
 
+/* ================= TAGS ================= */
+.combo-tag {
+  align-self: flex-start;
+  background: rgba(255,255,255,0.06);
+  color: #00ff88;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.4px;
+}
+
+.tag-premium {
+  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  color: #000;
+}
+
 /* ================= PRECIO ================= */
 .precio {
   font-size: 1.5rem;
@@ -247,9 +264,16 @@ body {
 /* ================= FOOTER ================= */
 footer {
   text-align: center;
-  padding: 30px 15px;
+  padding: 30px 15px 45px;
   font-size: 0.85rem;
-  opacity: 0.6;
+  opacity: 0.75;
+}
+
+.footer-mensaje {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #ddd;
+  line-height: 1.5;
 }
 
 /* ================= DESKTOP ================= */
