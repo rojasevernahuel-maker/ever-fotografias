@@ -225,13 +225,13 @@ body {
   text-decoration: none;
 }
 
-/* ================= DESTACADOS NEUTRALIZADOS ================= */
+/* ================= DESTACADOS ================= */
 .destacado,
 .premium {
   border: 1px solid #2A2A2A;
 }
 
-/* ================= BLOQUE SERVICIOS ADICIONALES ================= */
+/* ================= SERVICIOS ADICIONALES ================= */
 .servicios-bloque {
   margin-top: 60px;
   padding-top: 35px;
@@ -254,7 +254,6 @@ body {
   margin-bottom: 30px;
 }
 
-/* ================= SERVICIOS EXTRA ================= */
 .servicios-extra {
   display: flex;
   flex-direction: column;
