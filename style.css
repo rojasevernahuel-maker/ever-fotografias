@@ -126,49 +126,55 @@ body {
 .combos-titulo {
   text-align: center;
   font-size: 1.6rem;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-.combos-vertical {
+/* ===== CARRUSEL MÓVIL ===== */
+.combos-carousel {
   display: flex;
-  flex-direction: column;
-  gap: 22px;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
 }
 
-/* ================= CARD COMBO ================= */
+.combos-carousel::-webkit-scrollbar {
+  display: none;
+}
+
 .combo-card {
+  min-width: 75%;
+  scroll-snap-align: start;
   background: #141414;
   border-radius: 24px;
   padding: 22px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
   border: 1px solid #2A2A2A;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
 }
 
 .combo-card h3 {
   font-size: 1.2rem;
 }
 
-/* ================= TAGS ================= */
 .combo-tag {
   align-self: flex-start;
-  background: rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.08);
   color: #00ff88;
   font-size: 0.7rem;
-  font-weight: 600;
   padding: 6px 12px;
   border-radius: 20px;
-  letter-spacing: 0.4px;
+  font-weight: 600;
 }
 
 .tag-premium {
-  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  background: linear-gradient(135deg,#00ff88,#00cc6a);
   color: #000;
 }
 
-/* ================= PRECIO ================= */
+/* ===== PRECIO ===== */
 .precio {
   font-size: 1.5rem;
   font-weight: 700;
@@ -179,140 +185,62 @@ body {
   font-size: 0.85rem;
   text-decoration: line-through;
   opacity: 0.5;
-  margin-left: 8px;
+  margin-left: 6px;
 }
 
-/* ================= LISTAS ================= */
+/* ===== LISTAS ===== */
 .combo-list {
   list-style: none;
+  font-size: 0.95rem;
   display: flex;
   flex-direction: column;
   gap: 6px;
-  font-size: 0.95rem;
 }
 
-/* ================= ACORDEÓN ================= */
-.ver-mas {
-  background: none;
-  border: none;
-  color: #00ff88;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  padding: 6px 0;
-  text-align: left;
-}
-
-.combo-extra {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease;
-}
-
-.combo-card.activo .combo-extra {
-  max-height: 600px;
-}
-
-/* ================= BOTÓN COMBO ================= */
+/* ===== BOTÓN ===== */
 .combo-btn {
-  margin-top: 10px;
-  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  margin-top: auto;
+  background: linear-gradient(135deg,#00ff88,#00cc6a);
   color: #000;
-  text-align: center;
   padding: 14px;
   border-radius: 30px;
+  text-align: center;
   font-weight: 700;
   text-decoration: none;
 }
 
-/* ================= DESTACADOS ================= */
-.destacado,
-.premium {
-  border: 1px solid #2A2A2A;
-}
-
-/* ================= SERVICIOS ADICIONALES ================= */
-.servicios-bloque {
-  margin-top: 60px;
-  padding-top: 35px;
-  position: relative;
-}
-
-.servicios-bloque::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 10%;
-  width: 80%;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #2A2A2A, transparent);
-}
-
-.servicios-titulo {
-  text-align: center;
-  font-size: 1.7rem;
-  margin-bottom: 30px;
-}
-
-.servicios-extra {
+/* ===== INDICADORES ===== */
+.carousel-dots {
   display: flex;
-  flex-direction: column;
-  gap: 22px;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
 }
 
-/* ================= FOOTER ================= */
-footer {
-  text-align: center;
-  padding: 30px 15px 45px;
-  font-size: 0.85rem;
-  opacity: 0.75;
+.carousel-dots span {
+  width: 8px;
+  height: 8px;
+  background: #333;
+  border-radius: 50%;
 }
 
-.footer-mensaje {
-  margin-top: 20px;
-  font-size: 0.85rem;
-  color: #ddd;
-  line-height: 1.5;
+.carousel-dots .active {
+  background: #00ff88;
 }
 
-/* ================= DESKTOP ================= */
+/* ===== DESKTOP ===== */
 @media (min-width: 900px) {
-
-  .evento {
-    max-width: 1100px;
-    margin: 40px auto;
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-  .evento-titulo {
-    display: none;
-  }
-
-  .galeria-wrapper,
-  .testimonio {
-    flex: 1;
-  }
-
-  .galeria-scroll {
-    flex-wrap: wrap;
-    overflow: hidden;
-  }
-
-  .galeria-scroll img {
-    width: calc(33.33% - 10px);
-    height: 200px;
-  }
-
-  .combos-vertical {
+  .combos-carousel {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    overflow: visible;
   }
 
-  .servicios-extra {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+  .combo-card {
+    min-width: auto;
+  }
+
+  .carousel-dots {
+    display: none;
   }
 }
